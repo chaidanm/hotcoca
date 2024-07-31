@@ -1,7 +1,7 @@
 <?php
 define ('HOSTNAME', 'localhost');
 define ('USERNAME', 'root');
-define ('PASSWORD', 'flexxo');
+define ('PASSWORD', '1234');
 define ('DATABASE', 'sorteio');
 
 $link=false;
@@ -23,7 +23,6 @@ function busca_id(){
 	global $link;
 	$id=mysqli_insert_id($link);
 	return $id;
-	.
 }
 
 ?>

@@ -12,10 +12,17 @@ elseif(empty($nome)){
 elseif (strlen($nome)<3){
 	echo "NOME INVALIDO.";
 }
+elseif (strlen($fone)<11){
+	echo "FONE INVALIDO.";
+}
 
 elseif (strlen($nome) >45){
 	echo "NOME INVALIDO";
+} elseif (strlen($fone)>11){
+
+	echo "Telefone Errado ou INVALIDO";
 }
+
 else { 
         
     require_once('banco.php');
@@ -24,6 +31,11 @@ else {
 
 	$sql="insert into concorrentes (nome, tel ) values ('$nome','$fone')";
 	$resultado=execute($sql);
+} 
 
 
-}
+if ($resultado){
+
+	echo " Parabens você está concorrendo a um BICICRETA ";
+	
+	}
